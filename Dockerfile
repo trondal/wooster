@@ -15,10 +15,10 @@ RUN npm install \
 
 COPY . .
 
-EXPOSE 80
+# serve defaults to port 3000
+EXPOSE 3000
 
-# CMD ["npm", "run", "dev"]
-CMD [ "serve", "-l", "80" "-s", "dist" ]
+CMD [ "serve", "-s", "dist" ]
 
 # Copy local directories to the current local directory of our docker image (/app)
 # COPY ./src ./src
