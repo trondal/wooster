@@ -17,7 +17,8 @@ COPY . .
 
 EXPOSE 80
 
-CMD [ "serve", "-s", "dist" ]
+# CMD ["npm", "run", "dev"]
+CMD [ "serve", "-l", "80" "-s", "dist" ]
 
 # Copy local directories to the current local directory of our docker image (/app)
 # COPY ./src ./src
